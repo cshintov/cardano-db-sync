@@ -8,7 +8,7 @@
 # Image dependencies
 , bashInteractive, cacert, cardano-cli, cardano-db-sync, cardano-db-tool
 , coreutils, curl, findutils, getconf, glibcLocales, gnutar, gzip, jq, iana-etc
-, iproute, iputils, lib, libidn, libpqxx, postgresql, socat, utillinux
+, iproute, iputils, lib, libidn, libpqxx, postgresql_14, socat, utillinux
 }:
 
 let
@@ -40,7 +40,7 @@ let
         iputils # Useful utilities for Linux networking
         libidn # Library for internationalized domain names
         libpqxx # A C++ library to access PostgreSQL databases
-        postgresql # A powerful, open source object-relational database system
+        postgresql_14 # A powerful, open source object-relational database system
         socat # Utility for bidirectional data transfer
         utillinux # System utilities for Linux
         cardano-cli # tool for interacting with cardano-node
