@@ -46,7 +46,7 @@ let
         iputils # Useful utilities for Linux networking
         libidn # Library for internationalized domain names
         libpqxx # A C++ library to access PostgreSQL databases
-        postgresql # A powerful, open source object-relational database system
+        postgresql_14 # A powerful, open source object-relational database system
         socat # Utility for bidirectional data transfer
         utillinux # System utilities for Linux
         cardano-cli # tool for interacting with cardano-node
