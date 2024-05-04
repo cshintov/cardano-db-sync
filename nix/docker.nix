@@ -21,8 +21,8 @@ let
     name = "cardano-db-sync-base-env";
     config.Env = [ "NIX_SSL_CERT_FILE=${cacert}/etc/ssl/certs/ca-bundle.crt" ];
 
-    memSize = 2048; # Increase memory to 2 GB
-    enableKvm = false; # Disable KVM acceleration
+    buildVMMemorySize = 2048;
+    #enableKvm = false; # Disable KVM acceleration
 
     copyToRoot = buildEnv {
       name = "base-image-env";
@@ -61,8 +61,8 @@ let
   # Contains cardano-db-sync binary, but no application configuration
   imageNoConfig = dockerTools.buildImage {
     name = "cardano-db-sync-env";
-    memSize = 2048; # Increase memory to 2 GB
-    enableKvm = false; # Disable KVM acceleration
+    buildVMMemorySize = 2048;
+    #enableKvm = false; # Disable KVM acceleration
     fromImage = baseImage;
     copyToRoot = buildEnv {
       name = "cardano-db-sync-image-bin-env";
@@ -174,8 +174,8 @@ let
 
 in
   dockerTools.buildImage {
-    memSize = 2048; # Increase memory to 2 GB
-    enableKvm = false; # Disable KVM acceleration
+    buildVMMemorySize = 2048;
+    #enableKvm = false; # Disable KVM acceleration
     name = "cardano-db-sync";
     fromImage = imageNoConfig;
     tag = "latest";
