@@ -10,7 +10,7 @@
 , bashInteractive, cacert, cardano-cli, cardano-db-sync, cardano-db-tool
 , cardano-smash-server, coreutils, curl, findutils, getconf, glibcLocales
 , gnused, gnutar, gzip, jq, iana-etc, iproute, iputils, lib, libidn, libpqxx
-, postgresql, socat, utillinux
+, postgresql_14, socat, utillinux
 }:
 
 let
