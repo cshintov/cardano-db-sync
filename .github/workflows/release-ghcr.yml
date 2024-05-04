@@ -47,7 +47,7 @@ jobs:
 
       - name: Download image from cache
         run:
-          nix build --builders "" --max-jobs 0 .#cardano-db-sync-docker
+          nix build --builders "" --max-jobs 4 .#cardano-db-sync-docker
 
       - name: Log in to ghcr.io
         uses: docker/login-action@v2.1.0
